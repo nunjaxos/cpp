@@ -1,9 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abhmidat <abhmidat@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/24 09:40:47 by abhmidat          #+#    #+#             */
+/*   Updated: 2025/09/24 09:41:03 by abhmidat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
 # include <iostream>
 # include <string>
 # include <iomanip>
+# include <cstdlib>
+# include <cctype>
+# include <cstdlib>
+# include <sstream>
 
 class Contact {
 	private:
@@ -35,6 +51,17 @@ class PhoneBook {
 
 		void			add_contact();
 		void			search_contacts();
+		void			exit_phonebook();
 };
+
+std::string		resize_word(std::string word);
+std::string		get_input();
+void			check_command(std::string command, PhoneBook& phonebook);
+void			print_prompt();
+void			print_contact(Contact contact, int index);
+void			index_display(PhoneBook& phonebook, std::string index);
+int				check_empty(std::string str);
+int				fill(PhoneBook& phonebook);
+int			string_to_int(const std::string& str);
 
 #endif
