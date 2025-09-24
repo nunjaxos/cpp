@@ -44,14 +44,17 @@ class Contact {
 };
 
 class PhoneBook {
-    public:
+
+
+	public:
 		Contact 		contacts[8];
 		int				contact_count;
 		int				index;
-
-		void			add_contact();
-		void			search_contacts();
+		void			add_contact(PhoneBook& phonebook);
+		void			display_contact();
 		void			exit_phonebook();
+
+
 };
 
 std::string		resize_word(std::string word);
