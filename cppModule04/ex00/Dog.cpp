@@ -13,18 +13,21 @@ Dog::Dog(const std::string &type) : Animal(type)
 
 Dog::Dog(const Dog &other) : Animal(other)
 {
-    *this = other;
+    std::cout << "Dog copy constructor called" << std::endl;
+	if (this != &other)
+        *this = other;
 }
 
 Dog &Dog::operator=(const Dog &other)
 {
+    std::cout << "Dog assignment operator called" << std::endl;
     if (this != &other)
         this->type = other.type;
     return *this;
 }
 
 void Dog::makeSound() const{
-    std::cout << "rouf rouf !!" << std::endl;
+    std::cout << "wouf wouf !!" << std::endl;
 }
 
 std::string Dog::getType() const{

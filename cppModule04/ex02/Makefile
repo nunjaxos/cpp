@@ -1,7 +1,7 @@
 CXX = c++
-INCLUDES = Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
+INCLUDES = Animal.hpp Cat.hpp Dog.hpp Brain.hpp
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp Cat.cpp Dog.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp
+SRC = main.cpp Cat.cpp Dog.cpp Animal.cpp Brain.cpp
 OBJ = $(SRC:.cpp=.o)
 NAME = poly
 
